@@ -1,223 +1,66 @@
-:root {
-  --navy: #0a1a33;
-  --gray: #4b5563;
-  --light-gray: #e5e7eb;
-  --blue: #2563eb;
-  --white: #ffffff;
-  --radius: 10px;
-}
-
 body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: var(--white);
-  color: var(--navy);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #222;
 }
 
-.container {
-  width: 100%;
-  max-width: 1150px;
-  margin: auto;
-  padding: 0 1.5rem;
+header {
+    background: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
 }
 
-.top-banner {
-  background: var(--navy);
-  color: var(--white);
-  text-align: center;
-  padding: 0.6rem 0;
-  font-size: 0.9rem;
+.small-header {
+    padding: 40px 20px;
 }
 
-.header {
-  background: var(--white);
-  border-bottom: 1px solid var(--light-gray);
-  position: sticky;
-  top: 0;
-  z-index: 50;
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
+.about {
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--navy);
-  font-weight: 500;
-}
-
-.mobile-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.mobile-toggle span {
-  width: 25px;
-  height: 3px;
-  background: var(--navy);
-}
-
-.hero {
-  padding: 4rem 0;
-  background: #f8fafc;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.hero-text h1 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text p {
-  color: var(--gray);
-  max-width: 450px;
-}
-
-.btn-primary {
-  background: var(--blue);
-  color: var(--white);
-  padding: 0.7rem 1.4rem;
-  border-radius: var(--radius);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.hero-images {
-  display: grid;
-  gap: 1rem;
-}
-
-.hero-images img {
-  width: 100%;
-  border-radius: var(--radius);
-  height: 200px;
-  object-fit: cover;
-}
-
-.section {
-  padding: 4rem 0;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
 }
 
 .service-card {
-  background: var(--white);
-  border: 1px solid var(--light-gray);
-  border-radius: var(--radius);
-  padding: 1rem;
-  text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.service-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: var(--radius);
-}
-
-.service-card p {
-  color: var(--gray);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.contact-form {
-  display: grid;
-  gap: 1rem;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  padding: 0.7rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--light-gray);
-}
-
-.full {
-  width: 100%;
-}
-
-.footer {
-  background: var(--navy);
-  color: var(--white);
-  text-align: center;
-  padding: 1.5rem 0;
-  margin-top: 2rem;
-}
-
-@media (max-width: 900px) {
-  .hero-grid,
-  .service-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .mobile-toggle {
-    display: flex;
-    .fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s ease forwards;
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-.slide-up {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 1s ease forwards;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-button, .btn {
-  transition: transform .2s ease, background .2s ease;
-}
-
-button:hover, .btn:hover {
-  transform: scale(1.05);
-  background: #005bbb;
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f;
+    color: white;
+    margin-top: 40px;
 }
